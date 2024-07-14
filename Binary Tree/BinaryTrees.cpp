@@ -114,7 +114,7 @@ void postorder(Node*root){
         return;
     }
     postorder(root->left);
-    postorder(root->right);s
+    postorder(root->right);
     cout<<root->data<<" ";
 }
 int main(){

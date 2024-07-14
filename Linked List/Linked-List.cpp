@@ -5,7 +5,7 @@ class Node{
     public:
     int data;
     Node* next;
-    Node(int data){
+    Node(int data){ //Constructor
         this->data=data;
         this->next=NULL;
     }
@@ -59,8 +59,8 @@ class Node{
             cout<<"memory freed"<<endl;
         }   
 };
-    void insertion(Node* &head,Node*& tail,int muthi){
-        Node *newNode=new Node(muthi);
+    void insertion(Node* &head,Node*& tail,int data){
+        Node *newNode=new Node(data);
         if(tail==NULL && &head==&tail){
         head=newNode;
         tail=newNode;
@@ -104,15 +104,13 @@ class Node{
         else{
             Node *temp1=head;
             Node*temp2=NULL;
-            head=tail;
             int x=1;
             while(x<position && temp1 != NULL){
                 temp2=temp1;
                 if (temp1 == tail) {
                 tail = temp2;
                 }
-                temp1=temp1->next;
-                x++;;
+                x++;
             }
             if (temp1 == NULL) {
             cout << "Position out of range." << endl;

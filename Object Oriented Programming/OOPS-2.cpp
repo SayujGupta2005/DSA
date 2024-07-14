@@ -1,6 +1,6 @@
 // LuvBabbar_lec-43
  
-#include<bits/std++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
  // 1) Encapsulation
@@ -15,6 +15,23 @@ using namespace std;
  //                                         : Private if access modifier is private in child class
 
 
+//3) MultiLevel Inheritance
+// Class Animal is inherited by class Dog and class Dog is inherited by class German Shepherd
+
+
+//4) Multi-Inheritance
+//Inheriting multiple classes at same time
+
+//5) Hybrid Inheritance
+//Combination of different types of inheritances like multiple and multilevel inheritance
+
+//6) Inheritance Ambiguity 
+//If a class A inherits both class B and C and both classes have same function called func,
+// C object
+// then there'll be error if we call object.func();
+// So we use scope resolution and write as object.B::func(); {If we want to call func of B}
+
+
 class Humans{
 
     public:
@@ -23,8 +40,8 @@ class Humans{
     int age;
 
     public:
-    int getHealth(int health){
-        this->health=health;
+    int getHeight(int height){
+        this->height=height;
     }
     int setWeight(int weight){
         this->weight=weight;
@@ -32,10 +49,44 @@ class Humans{
 
 };
 
+class Animals{
+    public:
+    int height;
+    int weight;
+    
+};
 class Male:public Humans{
 
     public:
     string name;
-
-
 };
+
+
+class Sayuj: public Male{ // Multi-Level inheritance
+    public:
+    void printName(){
+        cout<<name<<endl;
+    };
+};
+
+class Experiment: public Humans,public Animals{ //Multi-inheritance
+    public:
+    string name;
+    
+};
+
+
+
+
+
+int main(){
+    
+    Sayuj smartguy;
+    smartguy.name = "Sayuj";
+    smartguy.printName();
+
+    return 0;
+}
+
+//7) Polymorphism
+//Two types: Compile Time Polymorphism , Run Time Polymorphism
