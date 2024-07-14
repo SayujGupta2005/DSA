@@ -104,7 +104,6 @@ class Node{
         else{
             Node *temp1=head;
             Node*temp2=NULL;
-            head=tail;
             int x=1;
             while(x<position && temp1 != NULL){
                 temp2=temp1;
