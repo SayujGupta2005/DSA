@@ -19,7 +19,8 @@ class Solution {
   		Node* insert(Node* root, int data) {
             if(root == NULL) {
                 return new Node(data);
-            } else {
+            }
+            else {
                 Node* cur;
                 if(data <= root->data) {
                     cur = insert(root->left, data);

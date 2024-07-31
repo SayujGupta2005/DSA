@@ -146,7 +146,7 @@ void fdelete(Node* root,int data){
 }
 
 int main(){
-    //data = 10 8 21 7 27 5 4 3
+    //data = 10 8 21 7 27 5 4 3 -1
     Node *root=nullptr;
     int d=0;
     cin>>d;
